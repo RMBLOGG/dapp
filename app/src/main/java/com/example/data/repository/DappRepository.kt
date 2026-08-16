@@ -109,6 +109,12 @@ class DappRepository(private val context: Context) {
         }
     }
 
+    // Dipanggil dari MainActivity setelah link konfirmasi email (dapp://login-callback) berhasil
+    // diproses oleh Supabase Auth SDK, supaya profil & data user langsung ke-load tanpa perlu login manual lagi.
+    suspend fun onEmailConfirmed() {
+        checkCurrentSession()
+    }
+
     // --- AUTHENTICATION VIA SUPABASE AUTH ---
 
     suspend fun signIn(email: String, pass: String): Result<Profile> {

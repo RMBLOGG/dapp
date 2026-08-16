@@ -20,7 +20,12 @@ object SupabaseConfig {
         supabaseKey = SUPABASE_ANON_KEY
     ) {
         install(Postgrest)
-        install(Auth)
+        install(Auth) {
+            // Cocok dengan intent-filter "dapp://login-callback" di AndroidManifest.xml
+            // dan Site URL yang di-set di Supabase Dashboard (Authentication > URL Configuration)
+            host = "login-callback"
+            scheme = "dapp"
+        }
         install(Realtime)
         install(Storage)
     }
