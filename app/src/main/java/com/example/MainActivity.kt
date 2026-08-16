@@ -14,6 +14,7 @@ import com.example.data.supabase.SupabaseConfig
 import com.example.navigation.DappNavGraph
 import com.example.ui.theme.DappTheme
 import com.example.ui.theme.GraphiteVoid
+import io.github.jan.supabase.auth.handleDeeplinks
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
