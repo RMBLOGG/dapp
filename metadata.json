@@ -1,0 +1,6 @@
+{
+  "name": "Dapp",
+  "description": "Native Android chat app featuring Graphite Void dark theme, asymmetric bubbles, pulse rings, thread replies, and Supabase integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
